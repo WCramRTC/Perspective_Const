@@ -24,28 +24,44 @@ namespace Perspective_Const
             int count = 5;
             Console.WriteLine(fiveFact);
 
-        factFiveLoop:;
 
-            fiveFact *= count;
 
-            if(count > 1)
-            {
-                count--;
-            }
-            else
-            {
-                goto breakOut;
-            }
-
-            goto factFiveLoop;
-        breakOut:;
-
-            Console.WriteLine(fiveFact);
+            Console.WriteLine(Factorial(5));
 
         //    69!
         //5!(69 −5)!
         // Factorial(69) / Factorial(5) * Factorial(69 - 5 )
         } // main
+
+        /*
+            def ReverseFactorial(Start, Finish = 1):
+
+                try:
+                    total = 1
+                    fin = Start - Finish if Finish != 1 else 1
+
+                    for i in range(Start, fin, -1):
+                        total *= i
+
+                    return total;
+                except ValueError:
+                    return None;
+         */
+
+        public static double Factorial(double start, double end = 1)
+        {
+
+            double total = 1;
+            double din = (start - end != 1) ? start - end : 1;
+
+            for (double i = start; i >= end; i--)
+            {
+                total *= i;
+                Console.WriteLine(i);
+            }
+
+            return total;
+        }
 
     } // class
 
